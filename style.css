@@ -7,7 +7,7 @@
 }
 
 body {
-    background-color: #0f0f12; /* Çok koyu modern arka plan */
+    background-color: #0f0f12; 
     color: #e0e0e0;
     line-height: 1.6;
     overflow-x: hidden;
@@ -206,7 +206,7 @@ header p {
     padding: 2rem;
     font-weight: 600;
     cursor: default;
-    /* CSS dosyasındaki diğer genel ayarlar .glass-card sınıfından geliyor */
+    
 }
 
 /* Renkli Glow Efektleri */
@@ -313,7 +313,7 @@ footer {
     border-radius: 5px;
 }
 
-/* Üzerine gelince rengi değişsin (Sitenin ana rengi) */
+/* Üzerine gelince rengi değiştirme */
 ::-webkit-scrollbar-thumb:hover {
     background: #00aaff; 
 }
@@ -381,13 +381,13 @@ footer {
 
 /* --- Profil Resmi Ayarları --- */
 .profile-img {
-    width: 250px;   /* Genişlik */
-    height: 250px;  /* Yükseklik */
-    border-radius: 50%; /* Bu kod resmi tam yuvarlak yapar */
-    object-fit: cover; /* Resim kare değilse bile bozulmadan sığmasını sağlar */
+    width: 250px;   
+    height: 250px;  
+    border-radius: 50%; 
+    object-fit: cover; 
     
-    display: block; /* Ortalamak için blok eleman yapıyoruz */
-    margin: 0 auto 30px; /* Üst-0, Sağ/Sol-Otomatik(Ortala), Alt-30px boşluk bırak */
+    display: block; 
+    margin: 0 auto 30px; 
     
     /* Sitenin temasına uygun süslemeler */
     border: 3px solid #00aaff; /* Mavi neon çerçeve */
@@ -395,7 +395,7 @@ footer {
     transition: transform 0.3s ease; /* Üzerine gelince hareket etmesi için geçiş */
 }
 
-/* Fare üzerine gelince hafif büyüsün (İsteğe bağlı) */
+
 .profile-img:hover {
     transform: scale(1.05);
 }
@@ -413,13 +413,13 @@ body {
     background-color: #00aaff;
     border-radius: 50%;
     
-    /* İŞTE ÇÖZÜM BURADA: absolute yerine fixed yapıyoruz */
+ 
     position: fixed; 
     
     transform: translate(-50%, -50%);
-    pointer-events: none; /* ÖNEMLİ: Tıklamaları engellemesin */
+    pointer-events: none; 
     z-index: 9999;
-    transition: width 0.3s, height 0.3s; /* Tıklama efekti için hazırlık */
+    transition: width 0.3s, height 0.3s; 
 }
 
 /* Arkadan gelen büyük halka (İz) */
@@ -429,11 +429,11 @@ body {
     border: 2px solid rgba(0, 170, 255, 0.5);
     border-radius: 50%;
     
-    /* İŞTE ÇÖZÜM BURADA: absolute yerine fixed yapıyoruz */
+   
     position: fixed;
     
     transform: translate(-50%, -50%);
-    pointer-events: none; /* ÖNEMLİ: Tıklamaları engellemesin */
+    pointer-events: none;
     z-index: 9998;
     transition: 0.1s; 
 }
@@ -444,11 +444,11 @@ body {
     height: 100vh;
     width: 100%;
     position: fixed;
-    z-index: 10000; /* Her şeyin üstünde */
+    z-index: 10000; 
     display: flex;
     align-items: center;
     justify-content: center;
-    transition: opacity 0.5s ease; /* Kaybolurken yumuşak olsun */
+    transition: opacity 0.5s ease; 
 }
 
 .loader-text {
@@ -519,11 +519,11 @@ body {
     transform: scale(1.3);
 }
 
-/* İçerik Kutusu (Glass Card ile uyumlu) */
+/* İçerik Kutusu  */
 .timeline-content {
     padding: 20px 30px;
-    /* Glass-card sınıfı zaten HTML'de var, burada ekstra ayar yapıyoruz */
-    border-left: 4px solid #00aaff; /* Soluna ekstra vurgu çizgisi */
+   
+    border-left: 4px solid #00aaff; 
 }
 
 .timeline-date {
@@ -557,7 +557,7 @@ body {
     width: 60px;
     height: 60px;
     
-    /* DEĞİŞİKLİK 1: Arka planı siyah yap ve beyaz çerçeve ekle */
+    
     background-color: #000000; 
     border: 2px solid #ffffff; 
     
@@ -565,34 +565,33 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.5); /* Gölgeyi biraz koyulaştırdık */
+    box-shadow: 0 4px 10px rgba(0,0,0,0.5); 
     z-index: 999;
     transition: all 0.3s ease;
 }
 
 .whatsapp-btn:hover {
     transform: scale(1.1);
-    background-color: #ffffff; /* Üzerine gelince arka plan beyaz olsun */
+    background-color: #ffffff; 
 }
 
-/* Üzerine gelince ikonun rengi tersine dönsün (Siyah olsun) */
+
 .whatsapp-btn:hover img {
     filter: brightness(0); 
 }
 
-/* DEĞİŞİKLİK 2: İkonun rengini beyaza çevir */
+
 .whatsapp-btn img {
     width: 35px;
     height: 35px;
-    /* Bu filtre, renkli bir resmi önce tamamen siyaha (brightness 0), 
-       sonra tam tersine yani beyaza (invert 1) çevirir. */
+  
     filter: brightness(0) invert(1);
     transition: all 0.3s ease;
 }
 
 
 .whatsapp-btn:hover {
-    transform: scale(1.1); /* Üzerine gelince büyüsün */
+    transform: scale(1.1); 
 }
 
 .whatsapp-btn img {
