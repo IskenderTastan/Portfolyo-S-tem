@@ -21,13 +21,12 @@ document.addEventListener('DOMContentLoaded', () => {
         ],
         typeSpeed: 100,  // Yazma hızı
         backSpeed: 50,   // Silme hızı
-        loop: true       // Döngü (sürekli tekrar etsin)
+        loop: true       // Döngü 
     });
 
     // ---------------------------------------------------------
     // 3. Particles.js (Hareketli Arka Plan)
     // ---------------------------------------------------------
-    // ÖNEMLİ: HTML'de <div id="particles-js"></div> olduğundan emin ol.
     if (document.getElementById('particles-js')) {
         particlesJS("particles-js", {
             "particles": {
@@ -136,9 +135,9 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    // ---------------------------------------------------------
-    // 4. Yukarı Çık Butonu (Back to Top) - Eğer eklediysen çalışır
-    // ---------------------------------------------------------
+    // ----------------------------
+    // 4. Yukarı Çık Butonu 
+    // ----------------------------
     const toTop = document.querySelector(".to-top");
     if(toTop) {
         window.addEventListener("scroll", () => {
@@ -164,20 +163,20 @@ var cursor = document.querySelector(".cursor");
 var cursor2 = document.querySelector(".cursor2");
 
 document.addEventListener("mousemove", function(e){
-    // Küçük nokta anında takip etsin
+    
     cursor.style.cssText = "left: " + e.clientX + "px; top: " + e.clientY + "px;";
-    // Büyük halka da aynısını yapsın (CSS'teki transition sayesinde geç gelecek)
+    
     cursor2.style.cssText = "left: " + e.clientX + "px; top: " + e.clientY + "px;";
 });
 
 // --- Preloader Kapatma ---
 window.addEventListener("load", function() {
     var loader = document.getElementById("preloader");
-    // Yarım saniye bekleyip kaybolsun ki animasyon görünsün
+    
     setTimeout(function() {
-        loader.style.opacity = "0"; // Şeffaflaştır
+        loader.style.opacity = "0"; 
         setTimeout(function(){
-            loader.style.display = "none"; // Tamamen kaldır
+            loader.style.display = "none"; 
         }, 500);
     }, 1000); 
 });
@@ -185,17 +184,16 @@ window.addEventListener("load", function() {
 // --- Canlı Saat ---
 function updateClock() {
     var now = new Date();
-    // Saati, dakikayı ve saniyeyi al
     var hours = String(now.getHours()).padStart(2, '0');
     var minutes = String(now.getMinutes()).padStart(2, '0');
     var seconds = String(now.getSeconds()).padStart(2, '0');
     
-    // Ekrana yazdır
+    // Ekrana yazdırma
     var clockElement = document.getElementById('live-clock');
     if (clockElement) {
         clockElement.textContent = hours + ":" + minutes + ":" + seconds;
     }
 }
-// Her saniye güncelle
+// Her saniye güncelleme
 setInterval(updateClock, 1000);
 updateClock(); // Sayfa açılır açılmaz bir kez çalıştır
